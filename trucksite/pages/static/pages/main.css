@@ -4,6 +4,29 @@
 	width: 800px;
 	height: auto;
 }
+
+#banner {
+  margin: 0 auto;
+  padding: 2.5em 0 0 0;
+}
+
+#banner h1 {font-size: 3.571em; line-height: .6;}
+
+#banner h1 a:link, #banner h1 a:visited {
+    color: #000305;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .6em .2em;
+    text-decoration: none;
+    width: 427px;
+}
+
+#banner h1 a:hover, #banner h1 a:active {
+    background: none;
+    color: #C74350;
+    text-shadow: none;
+}
+
 #wrapper {
 	margin-top: 0px;
 	margin-left: auto;
@@ -15,12 +38,6 @@
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-	font-size: 35px;
-	text-align: center;
-	color: #270c39;
 }
 
 .default-image {
@@ -40,6 +57,16 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.circleimg {
+  border-radius: 50%;
+}
+
+div.covid-image {
+	content: url('https://www.cdc.gov/about/images/facts/2020/socialdistancing.jpg');
+	margin: 0;
+	padding: 0;
 }
 
 ul {

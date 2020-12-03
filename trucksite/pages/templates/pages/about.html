@@ -1,23 +1,59 @@
 {% load static %}
-<html>
-<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+<html lang="en">
+
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+<!-- Start of Head -->
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trucking Logistics</title>
+<title>Castro's Trucking</title>
+
+<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
 </head>
+<!-- End of Head -->
+
+
+<!-- Start of Header -->
+<header id="banner" class="body">
+	<h1><a href="#">About Us</a><h1>
+			<ul>
+				<li><a href="{% url 'pages:index' %}">Home</a></li>
+				<li><a class="active" href="{% url 'pages:about' %}">About Us</a></li>
+				<li><a href="{% url 'pages:services' %}">Our Services</a></li>
+				<li><a href="{% url 'pages:products' %}">Our Products</a></li>
+				<li><a href="{% url 'polls:index' %}">Vote in Polls</a></li>
+			</u>
+	</h1>
+</header>
+<!-- End of Header -->
+
+
+<!-- Start of Feature Story -->
+<aside id="featured" class="body">
+<article>
+
+  <figure> 
+  </figure>
+
+  <hgroup>
+    <h2>Trucking with COVID</h2>
+    <h3><a href="#">Practicing Social Distance</a></h3>
+  </hgroup>
+ 
+  <p>
+  We prioritize safety here at Castro's Trucking. It is important we keep each other safe and practice social distancing. 
+  Wear a mask and remember to keep at least 6-ft from your neighbor.
+  Learn more about the importance of social distancing here, 
+  <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" rel="6-ft & You">Testing Locations</a> 
+  </p>
+
+</article>
+</aside>
+<!-- End of Feature Story -->
+
+
+<!-- Start of Body -->
 <body>
 
-<div class="default-image">
-	<h1>About Us</h1>
-	<div class="default-text">
-
-    <ul>
-	    <li><a href="{% url 'pages:index' %}">Home</a></li>
-	    <li><a class="active" href="{% url 'pages:about' %}">About Us</a></li>
-	    <li><a href="{% url 'pages:services' %}">Our Services</a></li>
-	    <li><a href="{% url 'pages:products' %}">Our Products</a></li>
-	    <li><a href="{% url 'polls:index' %}">Vote in Polls</a></li>
-    </ul>
-
 </body>
+<!-- End of Body -->
+
 </html>
