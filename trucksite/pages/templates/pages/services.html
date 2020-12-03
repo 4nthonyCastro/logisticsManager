@@ -14,10 +14,10 @@
 	<div class="default-text">
 <nav>
     <ul>
-	    <li><a href="">Home</a></li>
-	    <li><a href="about.html">About Us</a></li>
-	    <li><a class="active" href="services.html">Our Services</a></li>
-	    <li><a href="products.html">Our Products</a></li>
+	    <li><a href="{% url 'pages:index' %}">Home</a></li>
+	    <li><a href="{% url 'pages:about' %}">About Us</a></li>
+	    <li><a class="active" href="{% url 'pages:services' %}">Our Services</a></li>
+	    <li><a href="{% url 'pages:products' %}">Our Products</a></li>
 	    <li><a href="{% url 'polls:index' %}">Vote in Polls</a></li>
     </ul>
 </nav>

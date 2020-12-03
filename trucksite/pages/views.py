@@ -7,11 +7,6 @@ from django.template import loader
 
 from .models import Question, Choice
 
-# Create your views here.
-# def index(request):
-#    template = loader.get_template('pages/index.html')
-#    return HttpResponse(template.render({},request))
-
 class IndexView(generic.ListView):
     template_name = 'pages/index.html'
     context_object_name = 'latest_question_list' 
@@ -21,11 +16,17 @@ class IndexView(generic.ListView):
 class AboutView(generic.ListView):
     template_name = 'pages/about.html'
     context_object_name = 'latest_question_list'
- 
     def get_queryset(self): 
         return Question.objects.order_by('-pub_date')[:5]
 
-#def about(request):
-#    template = loader.get_template('pages/about.html')
-#    return render(request, 'pages/about.html', {})
-    # return HttpResponse(template.render({},request))
+class ServicesView(generic.ListView):
+    template_name = 'pages/services.html'
+    context_object_name = 'latest_question_list'
+    def get_queryset(self): 
+        return Question.objects.order_by('-pub_date')[:5]
+
+class ProductsView(generic.ListView):
+    template_name = 'pages/products.html'
+    context_object_name = 'latest_question_list'
+    def get_queryset(self): 
+        return Question.objects.order_by('-pub_date')[:5]
